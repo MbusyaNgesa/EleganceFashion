@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e58080;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0e0707;
+  color: white;
+  padding: 15px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.navbar a {
+  color: rgb(223, 226, 227);
+  text-decoration: none;
+}
+
+.hero {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #000;
+}
+
+.hero-overlay {
+  padding: 40px;
+  background-image: url("/imagimages/store.jpges/store.jpg");
+  border-radius: 10px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.products {
+  padding: 20px;
+  background: rgb(242, 245, 246);
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.product {
+  border: 1px solid #238fc5;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+}
+
+.footer {
+  background: #f4f6f7;
+  padding: 20px;
+}
+
+form input {
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+form button {
+  padding: 10px 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #aaa;
+  padding: 10px;
+  text-align: left;
+}
+
+footer {
+  font-size: 18px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  align-items: center;
+}
