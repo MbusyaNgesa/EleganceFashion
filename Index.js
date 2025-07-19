@@ -5,7 +5,7 @@ const cartCounter = document.getElementById("cart-count");
 function addToCart(itemName) {
   cartCount++;
   cartCounter.textContent = cartCount;
-  alert(${itemName} added to cart!);
+  alert(`${itemName} added to cart!`);
 }
 
 // Customer Review Form
@@ -13,12 +13,15 @@ const form = document.getElementById("review-form");
 const tableBody = document.querySelector("#reviews-table tbody");
 const API_URL = "http://localhost:3000/reviews";
 
+// Load reviews on page load
+window.addEventListener("DOMContentLoaded", loadReviews);
+
+// Handle form submission (POST)
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const formData = new FormData(form);
   const review = Object.fromEntries(formData.entries());
 
-  // Enter user (POST)
   fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -35,8 +38,7 @@ form.addEventListener("submit", function (e) {
     });
 });
 
-console.log(addEventListener);
-
+// Load and display reviews
 function loadReviews() {
   fetch(API_URL)
     .then((res) => res.json())
@@ -49,8 +51,8 @@ function loadReviews() {
           <td>${review.phone}</td>
           <td>${review.email}</td>
           <td>
-            <button onclick="editReview(${review.id})">Edit</button>
-            <button onclick="deleteReview(${review.id})">Delete</button>
+            <button onclick="editReview('${review.id}')">Edit</button>
+            <button onclick="deleteReview('${review.id}')">Delete</button>
           </td>
         `;
         tableBody.appendChild(row);
@@ -58,19 +60,19 @@ function loadReviews() {
     });
 }
 
-// Delete user (DELETE)
+// Delete review (DELETE)
 function deleteReview(id) {
-  fetch(${API_URL}/${id}, { method: "DELETE" }).then(() => loadReviews());
+  fetch(`${API_URL}/${id}`, { method: "DELETE" }).then(() => loadReviews());
 }
 
-// Edit user (PUT)
+// Edit review (PUT)
 function editReview(id) {
   const name = prompt("Enter new name:");
   const phone = prompt("Enter new phone:");
   const email = prompt("Enter new email:");
 
   if (name && phone && email) {
-    fetch(${API_URL}/${id}, {
+    fetch(`${API_URL}/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, phone, email }),

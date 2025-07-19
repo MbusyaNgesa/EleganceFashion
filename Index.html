@@ -1,78 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Elegance Fashion Store</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elegance Fashion Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h2>Elegance Fashion Store</h2>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </li>
+      </ul>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <h2>Elegance Fashion Store</h2>
-    <ul>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src=" ">
-      <h1>Elegance Fashion Store</h1>
-      <p>Style that defines you</p>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section id="products" class="products">
-    <h2>Our Collection</h2>
-    <div class="product-list">
-      <div class="product">
-        <img src=" " alt="Dress 1">
-        <h3>Summer Dress</h3>
-        <p>Ksh 5,000</p>
-        <button onclick="addToCart('Summer Dress')">Add to Cart</button>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src=" " />
+        <h1>Elegance Fashion Store</h1>
+        <p>Style that defines you</p>
       </div>
-      <div class="product">
-        <img src="data:image/avif;base64," alt="Shirt 2">
-        <h3>Classic Shirt</h3>
-        <p>Ksh 3,000</p>
-        <button onclick="addToCart('Classic Shirt')">Add to Cart</button>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <h2>Our Collection</h2>
+      <div class="product-list">
+        <div class="product">
+          <img src=" " alt="Dress 1" />
+          <h3>Summer Dress</h3>
+          <p>Ksh 5,000</p>
+          <button onclick="addToCart('Summer Dress')">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="data:image/avif;base64," alt="Shirt 2" />
+          <h3>Classic Shirt</h3>
+          <p>Ksh 3,000</p>
+          <button onclick="addToCart('Classic Shirt')">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="data:image/jpeg;base64," alt="Jacket 3" />
+          <h3>Leather Jacket</h3>
+          <p>Ksh 10,000</p>
+          <button onclick="addToCart('Leather Jacket')">Add to Cart</button>
+        </div>
       </div>
-      <div class="product">
-        <img src="data:image/jpeg;base64," alt="Jacket 3">
-        <h3>Leather Jacket</h3>
-        <p>Ksh 10,000</p>
-        <button onclick="addToCart('Leather Jacket')">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer: Customer Review Form -->
-  <footer id="contact" class="footer">
-    <h2>Customer Review</h2>
-    <form id="review-form">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <button type="submit">Submit Review</button>
-    </form>
+    <!-- Footer: Customer Review Form -->
+    <footer id="contact" class="footer">
+      <h2>Customer Review</h2>
+      <form id="review-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <button type="submit">Submit Review</button>
+      </form>
 
-    <!-- Reviews Table -->
-    <h3>Submitted Reviews</h3>
-    <table id="reviews-table">
-      <thead>
-        <tr><th>Name</th><th>Phone</th><th>Email</th><th>Actions</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </footer>
+      <!-- Reviews Table -->
+      <h3>Submitted Reviews</h3>
+      <table id="reviews-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="Index.js"></script>
+  </body>
 </html>
-
